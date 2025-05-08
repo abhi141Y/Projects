@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script defer src="firebase-config.js"></script>
+
+</head>
+<body>
+    <h2>Welcome, <span id="user-name"></span>!</h2>
+    <p>Thank you for using Trifactor Verification.</p>
+    <a href="hotstar.com/in/sports/cricket/csk-vs-srh/1540040303/video/live/watch">click here</a>
+
+    <script>
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = "index.html"; // Redirect to login
+            });
+        }
+    </script>
+</body>
+</html>
